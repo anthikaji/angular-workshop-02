@@ -12,9 +12,9 @@ export class ProductListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    const p1 = new Product('0001', 'AA', 130, 'Y', 5);
-    const p2 = new Product('0002', 'BBB', 20.5, 'N', 10);
-    const p3 = new Product('0003', 'CCCC', 30.75, 'Y', 100);
+    const p1 = new Product('0001', 'A    01', 130, 'Y', 5);
+    const p2 = new Product('0002', 'BB  02', 20.5, 'N', 10);
+    const p3 = new Product('0003', 'CCC 03', 30.75, 'Y', 100);
     this.products.push(p1, p2, p3);
   }
 }
