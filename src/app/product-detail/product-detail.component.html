@@ -1,0 +1,39 @@
+<!-- <h1>Product Code: {{ product.code }}</h1>
+<h1>Name: {{ product.name }}</h1>
+<h1>Price: {{ product.price }}</h1>
+<h1>{{ product.available }}</h1>
+<h1>Rating:</h1>
+<app-rating [rating]="product.rating"></app-rating> -->
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          <button class="btn btn-primary">
+            Product Image
+          </button>
+        </th>
+        <th>Product Code</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Available</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          {{ product.imageUrl }}
+        </th>
+        <th>{{ product.code }}</th>
+        <th>{{ product.name | uppercase | productName: "-" }}</th>
+        <th>{{ product.price | number: "1.2" }}</th>
+        <th>{{ product.available }}</th>
+        <th>
+          <app-rating [rating]="product.rating"> </app-rating>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
